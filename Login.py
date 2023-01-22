@@ -14,6 +14,7 @@ from dotenv import load_dotenv,find_dotenv
 
 load_dotenv()
 
+### This part also gonna be in seperate file
 username =os.getenv("IG_USERNAME")
 password = os.getenv("IG_PASSWORD")
 
