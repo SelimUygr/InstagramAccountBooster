@@ -27,7 +27,7 @@ def follow_from_explore():
       #   print(element.text)
 
       # Exit button of the posts
-      element = WebDriverWait(browser,150).until(EC.presence_of_element_located((By.XPATH,("/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div"))))
+      element = WebDriverWait(browser,5).until(EC.presence_of_element_located((By.XPATH,("/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div"))))
       element.click()
   # Go to href of the likes
   for href in range(len(hrefs)):
@@ -37,14 +37,14 @@ def follow_from_explore():
       # Get the button text
       element = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.XPATH,(f"/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div/div[{person}]/div[3]/button/div/div"))))
       # if not following the person already follow
-      if(element.text == "Follow"):
+      if(element.text == "Takip Et"):
         print("followed")
-        # element = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.XPATH,(f"/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div/div[{person}]/div[3]/button"))))
-        # element.click()
-        # sleep(3)
+        element = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.XPATH,(f"/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div/div[{person}]/div[3]/button"))))
+        element.click()
+        sleep(1)
       else:
         pass 
-    sleep(10)
+    sleep(3)
 
 
 follow_from_explore()
