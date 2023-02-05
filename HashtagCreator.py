@@ -1,6 +1,6 @@
 import random
 
-hashtags = ["#love","#extreme","#reeloftheday","#beautiful","#trick","#videooftheday","#happy","#follow","#nature","#instagram","#travel","#like4like","#style","#repost","#summer","#instadaily","#beauty","#friends","#instalike","#me","#smile","#family","#video","#life","#likeforlike","#music","#follow4follow","#amazing","#igers","#nofilter","#sunset","#beach","#motivation","#instamood","#lifestyle","#followforfollow","#sky","#l4l","#f4f","#likeforlikes"]
+hashtags = ["#love","#reeloftheday","#beautiful","#trick","#videooftheday","#happy","#follow","#nature","#instagram","#travel","#like4like","#style","#repost","#summer","#instadaily","#beauty","#friends","#instalike","#me","#smile","#family","#video","#life","#likeforlike","#music","#follow4follow","#amazing","#igers","#nofilter","#sunset","#beach","#motivation","#instamood","#lifestyle","#followforfollow","#sky","#l4l","#f4f","#likeforlikes"]
 print(len(hashtags))
 
 def generate_hashtag():
@@ -14,5 +14,6 @@ def generate_hashtag():
   return hasthag_for_post
 
 with open("hastags.txt","w") as f:
+  f.write("#extreme ")
   for hastag in generate_hashtag():
     f.write(f"{hastag} ")
